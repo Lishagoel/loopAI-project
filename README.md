@@ -10,6 +10,9 @@ Prerequisites
 Installation
 
     Clone the repository:
+   git clone https://github.com/Lishagoel/loopAI-project.git
+   cd loopAI-project
+
 
 Install dependencies:
 
