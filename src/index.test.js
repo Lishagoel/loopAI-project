@@ -2,7 +2,7 @@ const request = require('supertest');
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 
-// Import the app
+process.env.NODE_ENV = 'test';
 const app = require('./index');
 
 describe('Data Ingestion API Tests', () => {
