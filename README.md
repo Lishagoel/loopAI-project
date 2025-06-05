@@ -11,9 +11,6 @@ Installation
 
     Clone the repository:
 
-git clone https://github.com/ku28/data-ingestion-api.git
-cd data-ingestion-api
-
 Install dependencies:
 
     npm install
