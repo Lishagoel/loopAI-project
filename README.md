@@ -2,14 +2,6 @@
 
 A RESTful API system for handling data ingestion requests with priority-based processing and rate limiting.
 
-## Features
-
-- Asynchronous batch processing
-- Priority-based queue management (HIGH, MEDIUM, LOW)
-- Rate limiting (3 IDs per 5 seconds)
-- Status tracking for ingestion requests
-- Comprehensive test suite
-
 ## Prerequisites
 
 - Node.js (v14 or higher)
@@ -19,7 +11,7 @@ A RESTful API system for handling data ingestion requests with priority-based pr
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/ku28/data-ingestion-api
 cd data-ingestion-api
 ```
 
@@ -92,36 +84,3 @@ Response:
 ```bash
 npm test
 ```
-
-## Design Decisions
-
-1. **In-memory Storage**: Using Map objects for storing ingestion and batch data. In a production environment, this would be replaced with a persistent database.
-
-2. **Priority Queue**: Implemented using a sorted array based on priority weight and timestamp.
-
-3. **Rate Limiting**: Enforced through a 5-second delay between batch processing.
-
-4. **Batch Processing**: IDs are processed in batches of 3, with each batch taking 5 seconds to complete.
-
-5. **Status Tracking**: Three states for both batches and overall ingestion: yet_to_start, triggered, and completed.
-
-## Error Handling
-
-The API includes validation for:
-- Invalid IDs array
-- Invalid priority values
-- Non-existent ingestion IDs
-
-## Testing
-
-The test suite covers:
-- Basic API functionality
-- Priority processing
-- Rate limiting
-- Batch processing
-- Status transitions
-- Error cases
-
-## Deployment
-
-The application can be deployed to any Node.js hosting platform (e.g., Heroku, Railway, etc.). Make sure to set the PORT environment variable if needed. 
